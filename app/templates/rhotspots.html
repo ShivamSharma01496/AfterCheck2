@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div style = "position:relative; left:500px; top:2px;" >
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.hspotr.label }}<br>
+            {{ form.hspotr(size=32) }}<br>
+	    {% for error in form.hspotr.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+      
+        <p>{{ form.submitr() }}
+        <a href="{{ url_for('update_db') }}" class="button2">Update Database</a></p>
+    </form>
+
+
+<br>
+
+        
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</div>
+
+
+
+{% endblock %}

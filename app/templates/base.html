@@ -1,0 +1,102 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Indian Railways Network</title>
+      {% else %}
+      <title>Welcome to Indian Railways Network</title>
+      {% endif %}
+      
+    
+      
+      
+      
+      
+      
+      
+      <style>
+.button2 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 8px 4px;
+  cursor: pointer;
+}
+
+.textfield
+
+
+
+
+</style>
+      
+      
+      
+      
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+      
+    </head>
+
+
+
+
+
+
+
+<body style="background:url({{'static/'+'b9.jpg'}});background-attachment: fixed;background-size:cover;background-repeat: no-repeat;"> 
+    
+    
+    
+<h1 style="color:#8b0000"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JAI SHRI RAM </h1>
+    
+<hr>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a style="font-size:30px" "color:#8b0000" href="{{ url_for('index_9') }}"style="color:red">Home</a>
+      
+
+
+
+
+
+
+
+
+
+
+
+        
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+
+
+        {% block content %}{% endblock %}
+    </body>
+</html>

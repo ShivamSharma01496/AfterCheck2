@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+
+  <div style = "position:relative; left:500px; top:2px;" >
+  
+  
+  <div>
+  <h2>Add a new hotspot</h2>
+  </div>
+   
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.hspot.label }}<br>
+            {{ form.hspot }}<br>
+	    {% for error in form.hspot.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+      
+        <p>{{ form.submit(class="button2") }}
+        <a href="{{ url_for('update_db') }}" class="button2">Update Database</a></p>
+    </form>
+
+ <h4>{{ string }}</h4>
+ <h4>{{string2}}</h4>
+</div>
+
+
+
+
+{% endblock %}

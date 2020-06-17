@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style = "position:relative; left:400px; top:2px;" >
+
+<h3> Congrats!! You are sucessfully signed in as admin, you can now modify the various parameters</h3>
+
+<br>
+<br>
+<a style="font-size:23px" href = "{{ url_for('ahotspots') }}">Click here for adding a new hotspot</a> <br><br>
+<a  style="font-size:23px" href = "{{ url_for('rhotspots') }}">Click here for removing an existing hotspot</a><br><br>
+<a style="font-size:23px" href="{{ url_for('radius_of_hotspot') }}">Click here to set the radius of hotspot</a><br><br>
+<a  style="font-size:23px" href="{{ url_for('threshold_num')}}">Click here to set the threshold number below which station should be consider to made operational</a><br><br>
+<a style="font-size:23px" href="{{ url_for('length_of_route')}}">Click here to set the minimun length of route to be considered</a><br><br>
+
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+</div>
+
+
+{% endblock %}

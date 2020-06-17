@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Transport_Network_Analysis</title>
+<link rel="stylesheet" href="1.css">
+<link rel="stylesheet" type="text/css" href="2.css" />
+<link rel="stylesheet" type="text/css" href="http://timelib.890m.com/css/style.css" />
+<script type="text/javascript" src="3.js"></script>
+<script src="4.js"></script>
+                <script type="text/javascript" src="5.js"></script>
+<link rel="stylesheet" href="6.css" />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<style>
+#map { height: 760px; }
+
+</style>
+
+<script>
+$(function() {
+//This code is for simple Map
+var map = L.map('map').setView([28.5693121,77.1234645], 12);
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+
+var point = L.icon({
+    iconUrl: 'Untitled.png',
+    
+
+    iconSize:     [10, 10], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+

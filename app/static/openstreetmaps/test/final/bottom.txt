@@ -1,0 +1,10 @@
+});
+</script>
+
+</head>
+<body>
+<h1 style="text-align:center">Stations operational during Covid-19</h1>
+<div id="map"></div>
+
+</body>
+</html>

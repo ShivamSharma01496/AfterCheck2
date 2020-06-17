@@ -1,0 +1,73 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+
+
+ <div style = "position:relative; left:500px; top:2px;" > 
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.addhspot.label(id='middle')  }}<br>
+            {{ form.addhspot(size=32) }}<br>
+	    {% for error in form.addhspot.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+      
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.remhspot.label }} <br>
+            {{ form.remhspot(size=32) }} <a href = "{{ url_for('hotspots_list') }}">Click here to see the current list of hotspots</a><br>
+	    {% for error in form.remhspot.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        
+       
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.setr.label }}<br>
+            {{ form.setr(size=32) }}<br>
+	    {% for error in form.setr.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        
+        
+           {{ form.hidden_tag() }}
+        <p>
+            {{ form.setnum.label }}<br>
+            {{ form.setnum(size=32) }}<br>
+	    {% for error in form.setnum.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        
+        
+        
+         {{ form.hidden_tag() }}
+        <p>
+            {{ form.setmrl.label }}<br>
+            {{ form.setmrl(size=32) }}<br>
+	    {% for error in form.setmrl.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        
+       
+        
+        
+        
+        
+         <p>{{ form.submit() }}</p>
+    </div>
+        
+    </form>
+{% endblock %}
